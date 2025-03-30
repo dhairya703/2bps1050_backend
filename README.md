@@ -1,3 +1,5 @@
+Redis and all Are working locally but since my aws was billed previously so instead of s3 i used cloudinary
+
 Installation
 Clone the repository:
 
@@ -65,11 +67,21 @@ Request body: { "email": "user@example.com", "password": "password123" }
 
 Response: { "message": "User registered successfully" }
 
+![image](https://github.com/user-attachments/assets/35c17a00-22a3-43bd-b672-91ce543c9be2)
+
+
 POST /api/login: Login a user and return a JWT token.
 
 Request body: { "email": "user@example.com", "password": "password123" }
 
 Response: { "access_token": "your_jwt_token" }
+
+![image](https://github.com/user-attachments/assets/06bfd93e-b3fc-47f1-9125-0fde3aa062dc)
+Session Token Storage
+![image](https://github.com/user-attachments/assets/d24dd2f3-57d1-47d2-8e85-b18959108bf6)
+
+
+Now Only Valid Jwt user can access other apis 
 
 Protected Routes (Requires JWT Authentication)
 POST /api/upload: Upload a file.
@@ -77,6 +89,8 @@ POST /api/upload: Upload a file.
 Request body: multipart/form-data
 
 Response: { "message": "File uploaded successfully", "file_id": 123 }
+![image](https://github.com/user-attachments/assets/b33ece12-4af7-4318-bf6a-a6db46648fb8)
+![image](https://github.com/user-attachments/assets/5032af72-3317-4765-b5cf-8ffde67e3118)
 
 GET /api/profile: View user profile.
 
